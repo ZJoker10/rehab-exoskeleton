@@ -1,0 +1,11 @@
+build/
+install/
+log/
+*.o
+*.so
+*.a
+*.log
+.vscode/
+.idea/
+__pycache__/
+*.swp

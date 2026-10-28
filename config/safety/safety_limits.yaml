@@ -1,0 +1,31 @@
+# Safety Limits Configuration
+# CRITICAL: These values must be validated by clinical team
+
+joints:
+  - name: shoulder_flexion
+    position:
+      min: -1.5708  # -90 degrees
+      max: 2.61799  # 150 degrees
+    velocity:
+      max: 2.094    # 120 deg/s
+    torque:
+      max: 40.0     # Nm
+      min: -40.0
+  - name: elbow_flexion
+    position:
+      min: 0.0      # 0 degrees
+      max: 2.0944   # 120 degrees
+    velocity:
+      max: 3.142    # 180 deg/s
+    torque:
+      max: 30.0     # Nm
+      min: -30.0
+
+safety:
+  watchdog_timeout_ms: 100
+  estop_reset_cooldown_s: 5
+  temp_warning_c: 70.0
+  temp_critical_c: 85.0
+  position_margin: 0.01  # rad
+  velocity_margin: 1.1
+  torque_margin: 1.05
